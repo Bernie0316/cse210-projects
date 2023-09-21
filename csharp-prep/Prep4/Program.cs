@@ -42,5 +42,11 @@ class Program
             }
         }
         Console.WriteLine($"The largest number is {largest}");
+
+        // sc 1
+        //  find the smallest positive number (the positive number that is closest to zero).
+        
+        // sc 2
+        // 把數列由小至大重新排列印出
     }
 }
