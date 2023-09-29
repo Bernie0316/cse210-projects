@@ -15,7 +15,6 @@ class Program
             DisplayResult(user_name, square_num);
         }
         
-        
         // DisplayWelcome
         static void DisplayWelcome()
         {
@@ -52,6 +51,5 @@ class Program
         }
 
         Main();
-        
     }
 }
