@@ -55,18 +55,33 @@ public class Journal
  
     public void ReadFromFile(string filename)
     {
-        string[] lines = File.ReadAllLines(filename);
- 
-        foreach (string line in lines)
+        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
+        if (File.Exists(filename))
         {
-            string[] parts = line.Split(',');
-            if (parts.Length == 3)
+            string[] lines = File.ReadAllLines(filename);
+    
+            foreach (string line in lines)
             {
-                DateTime dateOfFile = DateTime.Parse(parts[0]);
-                string promptOfFile = parts[1];
-                string contentOfFile = parts[2];
-                entries.Add(new Entry(dateOfFile, promptOfFile, contentOfFile));
+                string[] parts = line.Split(',');
+                if (parts.Length == 3)
+                {
+                    if (DateTime.TryParse(parts[0], out DateTime dateOfGile))
+                    {
+                        DateTime dateOfFile = DateTime.Parse(parts[0]);
+                        string promptOfFile = parts[1];
+                        string contentOfFile = parts[2];
+                        entries.Add(new Entry(dateOfFile, promptOfFile, contentOfFile));
+                    }
+                    else
+                    {
+                        Console.WriteLine($"There's some error : {parts[0]}");
+                    }
+                }
             }
+        }
+        else
+        {
+            Console.WriteLine("Can't Find The File.");
         }
     }
 }
