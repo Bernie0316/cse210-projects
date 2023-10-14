@@ -55,7 +55,8 @@ public class Journal
  
     public void ReadFromFile(string filename)
     {
-        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
+        // 
+        string filePath = Path.Combine("journal.txt", filename);
         if (File.Exists(filename))
         {
             string[] lines = File.ReadAllLines(filename);
