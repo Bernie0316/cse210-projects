@@ -31,7 +31,6 @@ public class Fraction
         _top = top;
         _bottom = bottom;
     }
-
     public string GetFractionstring()
     {
         string fraction = $"{_top} / {_bottom}";
