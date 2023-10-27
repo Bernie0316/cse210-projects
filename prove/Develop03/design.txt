@@ -1,0 +1,56 @@
+What does the program do?
+    this program will display a scriptrue and randomly turn the words to be "_". 
+    Untill the whole verse becoome "__" or user stop the program
+
+What user inputs does it have?
+    quit, finish, enter button(?).
+
+What output does it produce?
+    a verse of scriptrue and wil change without any new print lines.
+
+How does the program end?
+    a whole verse of scriptrue turn "_" or by typing "quit"
+
+
+Class:
+    program
+        Class scriptrue 
+        get inputs
+
+    Scriptrue
+        responsibilities:
+            Keeps track of the reference and the text of the scripture. 
+            Can hide words and get the rendered display of the text.
+            hold the list<word>
+        behaviors:
+            Is Completely Hidden
+            display scriptrue
+        attributes:
+            hold whole verse of scriptrue. by list<word>
+        Constructors:
+            Reference
+            Scriptrue
+
+    Reference
+        responsibilities:
+            keep the whole imfor of the scriptrue. 
+        behaviors:
+            Show reference
+        attributes:
+            string motheds. (book, chapter, verse, endverse)
+        Constructors:
+            verse of scriptrue(with endverse)
+            verse of scriptrue(without endverse)
+
+    Word
+        responsibilities:
+            turn single word and whether it is shown or hidden.
+            storing the text of a word and whether it is hidden or not
+        behaviors:
+            Hide Words
+            Get Rendered Text
+        attributes:
+            string of text
+            check if the verse is hidden or not. 
+        Constructors:
+            set a string to be hidden word.
