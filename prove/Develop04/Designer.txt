@@ -1,0 +1,76 @@
+Prove 04
+
+https://byui-cse.github.io/cse210-course-2023/unit04/design.html
+
+https://byui-cse.github.io/cse210-course-2023/unit04/develop.html
+
+////////////////////////////////////////////////////////////////
+
+1. What does the program do?
+    The program will bring user to a menu to choose a activity by enter num(1~4). 
+    the activity will start with sth tell you name of the activity. 
+    And the description then ask "how long user would like to do this one in sec?"
+    And record the secs of activity user like to do.
+    Get few secconds for ready up by display ("Get ready...(sec)") 
+        1. Start breathing activity:
+            give prompts and repeat with "Breathe in....(sec counts)", "Now breathe out...(sec counts)"
+            untill tims up.
+        2. Start reflecting activity
+            The system will give user different prompt 
+            And wait for user ponder(now the timer wouldn't work untill "enter" pressed) 
+            After user're ready(pressed "enter")
+            The system will counts down and display new screen with pondering Qs per few secs.
+        3. Start listing activity
+            The system will give user different prompt 
+            And user will type in the anwswers in time.
+            User can keep typeing as many as they can get untill times up. 
+        After the activity:
+            ("Well done")
+            ("You have conpleted another () seconds of the "" activity")
+            System will go back to the menu. 
+    4. Quit
+
+2. What user inputs does it have?
+    int for options and activity seconds
+    string for activity 3 with answer prompt Qs.
+
+3. What output does it produce?
+    menu, input questions, activity description, prompts, timer
+4. How does the program end?
+    by type num "4"
+
+////////////////////////////////////////////////////////////////
+
+Program
+Activity
+    string: The activity name
+    string: The description
+    int: The duration in seconds
+    
+    Displaying the starting message
+    Displaying the ending message
+    Pausing while showing a spinner
+    Pausing while showing a countdown timer
+BreathingActivity
+    inheritance from Activity
+    string:
+
+    Display the prompt
+
+ReflectingActivity
+    inheritance from Activity
+    list<string>: prompts
+    list<string>: questions
+
+    Get a random prompt
+    Get a random question about the prompt
+    Display the prompt
+    Display questions about the prompt and get answers
+ListingActivity
+    inheritance from Activity
+    list<string> items
+
+    Display the prompt
+    Get list<string> items
+
+////////////////////////////////////////////////////////////////
