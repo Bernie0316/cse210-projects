@@ -1,0 +1,10 @@
+Program(main class):
+Goal(basic class):
+    attributes:
+        *needs to apply all the goals
+    behaviors:
+        RecordEvent
+        IsComplete (override)
+subclass:
+    attributes:
+    behaviors:

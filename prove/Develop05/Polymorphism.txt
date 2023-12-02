@@ -1,0 +1,79 @@
+Polymorphism is a concept in bject oriented programming language. 
+It allows a method be able to have different actions. 
+By different context we can inheritance the old method from mian class to subclass and give it a new actions.
+It can helps our code be come more readable to maintainable also consistency.
+I'll provode an example of how we can apply the "Polymorphism".
+// In this example I will write a area calculator. 
+// The main class include the name of what we calculate and the method of calculate
+public class Shape
+{
+    private string _name;
+    // constructor
+    public Shape(string color)
+    {
+        _name = name;
+    }
+    // get and set the name of what we calculate
+    public string GetName()
+    {
+        return _name;
+    }
+    public void SetName(string name)
+    {
+        _name = name;
+    }
+    // calculate method
+    public virtual double GetArea()
+    {
+        return 0;
+    }
+}
+// Then is the class to save what we want calculate
+public class Square : Shape
+{
+    // inheritance the attributes
+    private double _side;
+    public Square(string name, double side) : base (color)
+    {
+        _anme = name;
+    }
+    // inheritance and change(override) the calculate method
+    public override double GetArea()
+    {
+        return _side * _side;
+    }
+}
+
+// Because of Polymorphism, we can create other subclasses then give then different method
+public class Circle : Shape
+{
+    private double _radius;
+    public Circle(string name, double radius) : base (name)
+    {
+        _radius = radius;
+    }
+    // inheritance and change(override) the calculate method
+    public override double GetArea()
+    {
+        return _radius * _radius * Math.PI;
+    }
+}
+// Now we can run the code in our main class. we can call different class the give  
+// them datas so they can help us calculate those. 
+class Program
+{
+    static void Main(string[] args)
+    {
+        List <Shape> shapes = new List<Shape>();
+        shapes.Add(new Square("Square", 10));
+        shapes.Add(new Circle("Circle", 10));
+
+        foreach(Shape shape in shapes)
+        {
+            string name = shape.GetName();
+            double area = shape.GetArea();
+            Console.WriteLine($"{name} - {area}");
+        }
+    }
+}
+// Now the Program will print out names and results of calculate
