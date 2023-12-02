@@ -1,0 +1,15 @@
+I chose Foundation 4
+
+Abstraction:
+    This program defines classes for "Video" and "Comment" to save information about YouTube videos and their comments. 
+    By creates a list of videos, sets their attributes, and displays details for each video in the list.
+Encapsulation:
+    This program defines classes for "Order," "Product," "Customer," and "Address" to model an online ordering system. 
+    The program calculates the total cost of order, generates packing and shipping labels, and displays relevant information for at least two orders with each products . 
+    The classes apply encapsulation with private member variables, getters, setters, and appropriate methods to reach these functionalities.
+Inheritance:
+    This program apply inheritance for event planning system, with a base "Event" class and derived classes for specific event types. 
+    It ensures encapsulation, avoids code duplication, and generates marketing messages for different events, including lectures, receptions, and outdoor gatherings.
+Polymorphism:
+    This program apply polymorphism, using a base "Activity" class and get classes for running, cycling, and swimming. 
+    It calculates and displays activity summaries, avoiding code duplication through inheritance and method overriding while adhering to encapsulation principles.
