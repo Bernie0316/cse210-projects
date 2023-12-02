@@ -4,7 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Console.WriteLine("Hello Develop05 World!");
         List<string> options = new List<string>
         {
             "\nMenu Options",
