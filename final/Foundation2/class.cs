@@ -14,7 +14,13 @@ public class Order
             {
                 total += product.GetPrice();
             }
+        total += ShipCast();
         return total;
+    }
+    public double ShipCast()
+    {
+        double shippingCast = _customer.IsUSA() ? 5: 35;
+        return shippingCast;
     }
     public string PackLabel()
     {
@@ -29,7 +35,7 @@ public class Order
     }
     public string ShipLabel()
     {
-        return $"Name: {_customer.GetName()}\n Address: {_customer.GetAddress()}";
+        return $"Name: {_customer.GetName()}\nAddress: {_customer.GetAddress().GetAddress()}";
     }
 }
 public class Product
